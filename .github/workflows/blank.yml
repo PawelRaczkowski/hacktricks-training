@@ -27,9 +27,9 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: us-east-1
       ## enumerate
-      - name: Sts GetCallerIdentity
+      - name: Get info
         run: |
-          aws iam get-policy --policy-arn arn:aws:iam::882322149089:policy/sts_lab_2_target     
+          aws iam get-policy-version --policy-arn arn:aws:iam::882322149089:policy/sts_lab_2_target --version-id v1  
       # Hello from AWS: WhoAmI
       - name: Sts GetCallerIdentity
         run: |
