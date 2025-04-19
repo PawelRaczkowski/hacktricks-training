@@ -29,8 +29,8 @@ jobs:
       ## enumerate
       - name: Get info
         run: |
-          aws iam get-policy-version --policy-arn arn:aws:iam::882322149089:policy/sts_lab_2_target --version-id v1  
-      # Hello from AWS: WhoAmI
+          aws secretsmanager get-secret-value --secret-id flag_sts_lab_2
+      # Hello from AWS: WhoAmIflag_sts_lab_2
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
